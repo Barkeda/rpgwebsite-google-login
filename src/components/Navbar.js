@@ -4,9 +4,7 @@ import {Link} from 'react-router-dom';
 import { menuData } from '../data/MenuData';
 import {Button} from './Button';
 import {FaBars} from 'react-icons/fa';
-// import firebase from 'firebase/compat';
 import GoogleLogin from 'react-google-login';
-// require('firebase/auth');
 
 
 
@@ -73,44 +71,6 @@ margin-right: 24px;
     display: none;
 }
 `;
-
-
-//    export default function App() {
-    //    var provider = new firebase.auth.GoogleAuthProvider();
-
-    //  const [user, setUser] = useState(null);
-
-    //  useEffect(() => {
-    //     firebase.auth.onAuthStateChanged((user) => {
-    //       if (user) {
-    //           var uid = user.uid;
-    //         console.log('User has signed in');
-    //         setUser(uid);
-    //       } else {
-    //         // User is signed out
-    //         console.log('user has not signed in');
-    //         setUser(null);
-    //       }
-    //     });
-    // }, [])
-
-    // function signInWithGooglePopup(){
-    //     firebase.auth()
-    //     .signInWithPopup(provider)
-    //     .then((result) => {
-    //       console.log('User has signed in')
-    //     }).catch((error) => {
-    //       // Handle Errors here.
-    //       var errorCode = error.code;
-    //       var errorMessage = error.message;
-    //       // The email of the user's account used.
-    //       var email = error.email;
-    //       // The firebase.auth.AuthCredential type that was used.
-    //       var credential = error.credential;
-    //       console.log('Errors occurred doing sign in: $(errorCode), $(errorMessage), $(email), $(credential)')
-    //     });
-    //   }
-
 
       export default function App() {
 

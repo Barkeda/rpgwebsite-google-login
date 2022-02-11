@@ -133,22 +133,22 @@ const [current, setCurrent] = useState(0)
 const length = slides.length
 const timeout = useRef(null);
 
-// makes the slides work 
-// useEffect(() => {
-//     const nextSlide =() => {
-//         setCurrent(current => (current === length - 1 ? 0 : current + 1));
-//         };
-//         timeout.current = setTimeout(nextSlide, 6000);
+//makes the slides work 
+useEffect(() => {
+    const nextSlide =() => {
+        setCurrent(current => (current === length - 1 ? 0 : current + 1));
+        };
+        timeout.current = setTimeout(nextSlide, 6000);
 
-//         return function() {
-//         if(timeout.current)
-//         {
-//             clearTimeout(timeout.current)
-//         }
-//         };
-//     }, 
-//     [current, length]
-// );
+        return function() {
+        if(timeout.current)
+        {
+            clearTimeout(timeout.current)
+        }
+        };
+    }, 
+    [current, length]
+);
 
 const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1)
@@ -184,9 +184,6 @@ if(!Array.isArray(slides) || slides.length <= 0) {
                         <h1>{slide.title}</h1> 
                         <p>{slide.price}</p>
                         <Button to={slide.path} primary='true'
-                        // css={`
-                        //     max-width: 160px;
-                        // `}
                         >
                             {slide.label}
                             <Arrow/>
